@@ -2,7 +2,7 @@ module.exports = {
     root: true,
     parser: '@typescript-eslint/parser',
     parserOptions: {
-        ecmaVersion: 2020,
+        ecmaVersion: 'latest',
         sourceType: 'module',
         project: 'tsconfig.json'
     },
@@ -22,7 +22,7 @@ module.exports = {
     "rules": {
         'react/jsx-filename-extension': 0,
         '@typescript-eslint/indent': ['error', 4],
-        '@typescript-eslint/object-curly-spacing': ['error', 'never'],
+        '@typescript-eslint/object-curly-spacing': ['error', 'always'],
         '@typescript-eslint/no-unused-vars': 0,
         '@typescript-eslint/typedef': [
             'error',
@@ -39,6 +39,9 @@ module.exports = {
                 variableDeclarationIgnoreFunction: true,
             },
         ],
+        '@typescript-eslint/comma-dangle': ['error', {
+            objects: 'never'
+        }],
         '@typescript-eslint/no-inferrable-types': 0
     }
 };

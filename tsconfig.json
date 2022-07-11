@@ -9,6 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "incremental": true,
     "noImplicitAny": false,
+    "experimentalDecorators": true,
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "build",
@@ -20,7 +21,8 @@
     }
   },
   "include": [
-    "*.ts"
+    "./src/**.ts",
+    "./src/*/**.ts"
   ],
   "exclude": [
     "node_modules",

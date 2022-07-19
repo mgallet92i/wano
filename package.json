@@ -29,9 +29,14 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "@fastify/awilix": "^3.0.0",
     "@fastify/type-provider-typebox": "^2.0.1",
     "@sinclair/typebox": "^0.24.10",
+    "arangodb-instance-manager": "^1.2.3",
+    "arangojs": "^7.8.0",
+    "awilix": "^7.0.3",
     "fastify": "^4.2.0",
-    "fastify-plugin": "^3.0.1"
+    "fastify-plugin": "^3.0.1",
+    "pino": "^8.1.0"
   }
 }

@@ -1,0 +1,3 @@
+import { Arangodb } from './arangodb';
+
+export type DataSource = Arangodb | null; // | mongodb | postgres ...

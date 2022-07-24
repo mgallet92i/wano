@@ -1,9 +1,9 @@
-export interface AppConfig {
+export interface ServerConfig {
     host: string;
     port: number;
 }
 
-export const serverConfig: AppConfig = {
+export const serverConfig: ServerConfig = {
     host: '127.0.0.1',
     port: 3003
 };

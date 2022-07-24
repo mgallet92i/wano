@@ -1,3 +1,15 @@
-import { Arangodb } from './arangodb';
+import { Database as ArangoDataBase } from 'arangojs';
+import { DataSourceConfig } from '../../config/data-source.config';
 
-export type DataSource = Arangodb | null; // | mongodb | postgres ...
+export type DataBase = ArangoDataBase; // todo: mongo, ...
+
+export interface DataSource {
+
+    config: DataSourceConfig;
+
+    db: DataBase;
+
+    connect(): Promise<boolean>;
+
+    close(): void;
+}

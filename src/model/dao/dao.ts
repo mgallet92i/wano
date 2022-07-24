@@ -1,14 +1,15 @@
 export interface Dao<T> {
 
-    find(id: string): T | null;
+    find(id: string): Promise<T> | null;
 
-    findAll(): T[];
+    // findAll(): T[];
+    //
+    save(data: T): Promise<string>;
 
-    save(data: T);
-
-    saveAll(data: T[]);
-
-    update(data: T);
-
-    delete(data: T);
+    //
+    // saveAll(data: T[]);
+    //
+    // update(data: T);
+    //
+    // delete(data: T);
 }

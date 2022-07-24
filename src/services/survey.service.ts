@@ -1,18 +1,29 @@
-import { app } from '../index';
+import { logger } from '../index';
 import { Survey } from '../model/entities/survey';
-import { SurveyDao } from '../model/dao/arango/survey-dao';
-import { Document } from 'arangojs/documents';
+import { Dao } from '../model/dao/dao';
 
 export class SurveyService {
 
-    surveyDao: SurveyDao;
+    surveyDao: Dao<Survey>;
 
-    constructor() {
-        this.surveyDao = app.diContainer.resolve<SurveyDao>('surveyDao');
+    // eslint-disable-next-line @typescript-eslint/typedef
+    constructor({ surveyDao }) {
+        this.surveyDao = surveyDao;
     }
 
     async find(id: string): Promise<Survey> {
-        const doc: Document<Survey> = await this.surveyDao.find(id);
-        return new Survey(doc.title, doc.category); // todo: use automapper
+        try {
+            return await this.surveyDao.find(id);
+        } catch (e) {
+            logger.error(e);
+        }
+    }
+
+    async save(data: Survey): Promise<string> {
+        try {
+            return await this.surveyDao.save(data);
+        } catch (e) {
+            logger.error(e);
+        }
     }
 }

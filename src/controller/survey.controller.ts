@@ -1,8 +1,8 @@
 import { FastifyInstance, FastifyPluginAsync, FastifyReply, FastifyRequest } from 'fastify';
 import fp from 'fastify-plugin';
 import { SurveyParams } from './schemas/survey.schema';
-import { SurveyService } from '../services/survey.service';
-import { Survey } from '../model/entities/survey';
+import { SurveyService } from '../service/survey.service';
+import { Survey } from '../model/entity/survey';
 
 const surveyRoute: FastifyPluginAsync = async (fi: FastifyInstance) => {
 

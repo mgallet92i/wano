@@ -7,9 +7,9 @@ import { IncomingMessage, Server, ServerResponse } from 'http';
 import { ServerConfig } from './config/server.config';
 import { diContainer, fastifyAwilixPlugin } from '@fastify/awilix';
 import { asClass, asValue, Lifetime } from 'awilix';
-import { SurveyService } from './services/survey.service';
+import { SurveyService } from './service/survey.service';
 import { SurveyArangoDao } from './model/dao/arango/survey-arango.dao';
-import surveyController from './controllers/survey.controller';
+import surveyController from './controller/survey.controller';
 
 // import { TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
 

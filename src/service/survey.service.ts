@@ -1,5 +1,5 @@
 import { logger } from '../index';
-import { Survey } from '../model/entities/survey';
+import { Survey } from '../model/entity/survey';
 import { Dao } from '../model/dao/dao';
 
 export class SurveyService {

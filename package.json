@@ -34,7 +34,6 @@
     "awilix": "^7.0.3",
     "fastify": "^4.3.0",
     "fastify-plugin": "^4.0.0",
-    "pino": "^8.3.0",
-    "typevert": "^0.9.11"
+    "pino": "^8.3.0"
   }
 }
